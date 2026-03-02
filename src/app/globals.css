@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-display: var(--font-satoshi), "system-ui", "sans-serif";
+  --font-body: var(--font-general-sans), "system-ui", "sans-serif";
+
+  /* Colors — Midnight Operations palette */
+  --color-bg-primary: #0A0B14;
+  --color-bg-secondary: #111827;
+  --color-bg-tertiary: #1A1F2E;
+  --color-accent: #00D4AA;
+  --color-accent-secondary: #F59E0B;
+  --color-accent-cyan: #06B6D4;
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-tertiary: #64748B;
+  --color-border: #1E293B;
+  --color-whatsapp: #25D366;
+  --color-error: #EF4444;
+
+  /* Easing */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  color: var(--color-text-primary);
+}
