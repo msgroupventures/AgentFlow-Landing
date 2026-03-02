@@ -21,6 +21,9 @@
 
   /* Easing */
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Breakpoints */
+  --breakpoint-wide: 1440px;
 }
 
 /* Base styles */
