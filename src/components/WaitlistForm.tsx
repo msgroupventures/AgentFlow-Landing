@@ -26,9 +26,11 @@ export function WaitlistForm({
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="text-center"
+          role="status"
+          aria-live="polite"
         >
           <p className="text-2xl font-bold font-display">
-            ¡Estás en la lista! 🎉
+            <span aria-hidden="true">🎉 </span>¡Estás en la lista!
           </p>
           <p className="text-text-secondary mt-2">
             Te vamos a avisar apenas AgentFlow esté listo. Mientras tanto,
@@ -42,12 +44,18 @@ export function WaitlistForm({
           className={`flex ${variant === "compact" ? "flex-row" : "flex-col sm:flex-row"} gap-3 w-full max-w-md`}
           exit={{ opacity: 0, scale: 0.95 }}
         >
+          <label htmlFor={`waitlist-email-${variant}`} className="sr-only">
+            Tu email
+          </label>
           <input
+            id={`waitlist-email-${variant}`}
             type="email"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="tu@email.com"
+            aria-label="Tu dirección de email para la lista de espera"
+            autoComplete="email"
             className="flex-1 px-4 py-3 rounded-full bg-bg-secondary border border-border text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
           />
           <button
