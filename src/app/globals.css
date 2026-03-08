@@ -14,7 +14,7 @@
   --color-accent-cyan: #06B6D4;
   --color-text-primary: #F1F5F9;
   --color-text-secondary: #94A3B8;
-  --color-text-tertiary: #64748B;
+  --color-text-tertiary: #768696;
   --color-border: #1E293B;
   --color-whatsapp: #25D366;
   --color-error: #EF4444;
@@ -73,6 +73,16 @@ body {
 
 .skip-to-content:focus {
   top: 0;
+}
+
+/* Glow pulse — opacity only (avoids layout/paint on background properties) */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 8s ease-in-out infinite;
 }
 
 /* Selection */

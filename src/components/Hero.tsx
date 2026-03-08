@@ -222,17 +222,16 @@ function WhatsAppMockup() {
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
+    <section className="relative overflow-hidden pt-16">
       {/* Animated gradient background */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {/* Primary radial glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%]">
           <div
-            className="absolute inset-0 animate-pulse"
+            className="absolute inset-0 animate-glow-pulse"
             style={{
               background:
                 "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(0,212,170,0.08) 0%, rgba(6,182,212,0.04) 40%, transparent 70%)",
-              animationDuration: "8s",
             }}
           />
         </div>
@@ -301,7 +300,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7, ease }}
-              className="mt-8 w-full max-w-md"
+              className="mt-8 w-full max-w-md scroll-mt-20"
               id="waitlist"
             >
               <WaitlistForm />
