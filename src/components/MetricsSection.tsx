@@ -5,10 +5,10 @@ import { motion, useInView } from "motion/react";
 import { AnimatedSection } from "./AnimatedSection";
 
 const metrics = [
-  { value: 79, suffix: "", label: "herramientas de IA", sublabel: "especializadas en operaciones inmobiliarias" },
-  { value: 2, prefix: "<", suffix: " min", label: "generación de documentos", sublabel: "de pedido a PDF por WhatsApp" },
-  { value: 9, suffix: "", label: "procesos automáticos", sublabel: "funcionando 24/7 en segundo plano" },
-  { value: 10, suffix: "", label: "etapas del pipeline", sublabel: "desde lead hasta escritura" },
+  { value: 2, prefix: "", suffix: " hs/día", label: "recuperadas por agente", sublabel: "que antes se perdían en coordinación y papeleo" },
+  { value: 50, prefix: "", suffix: "%", label: "menos tiempo en visitas", sublabel: "coordinando entre vendedor, comprador y agente" },
+  { value: 2, prefix: "menos de ", suffix: " min", label: "de pedido a documento entregado", sublabel: "autorizaciones, reservas y ofertas listas para firmar" },
+  { value: 24, prefix: "", suffix: "/7", label: "siempre trabajando", sublabel: "9 automatizaciones activas mientras vos vendés" },
 ];
 
 function CountUp({
