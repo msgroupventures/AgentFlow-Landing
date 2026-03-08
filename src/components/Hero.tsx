@@ -1,9 +1,16 @@
 "use client";
 
 import { motion } from "motion/react";
+import { Check } from "lucide-react";
 import { WaitlistForm } from "./WaitlistForm";
 
 const ease = [0.16, 1, 0.3, 1] as const;
+
+const differentiators = [
+  "No es un chatbot — es una IA que razona",
+  "Autorizaciones y reservas RE/MAX incluidas",
+  "Construida para Argentina, conoce el mercado local",
+] as const;
 
 const whatsappMessages = [
   {
@@ -291,8 +298,12 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.5, ease }}
               className="mt-6 text-lg md:text-xl leading-relaxed text-text-secondary max-w-xl"
             >
-              AgentFlow es la IA que coordina visitas, genera documentos y
-              gestiona tus oportunidades de venta — todo por WhatsApp.
+              AgentFlow es la IA que coordina visitas, genera autorizaciones de
+              venta y sigue tus oportunidades — todo por WhatsApp.{" "}
+              <span className="text-text-tertiary">
+                Diseñada desde cero para el mercado argentino, no adaptada para
+                él.
+              </span>
             </motion.p>
 
             {/* CTA */}
@@ -305,6 +316,17 @@ export function Hero() {
             >
               <WaitlistForm />
             </motion.div>
+
+            {/* Trust signal */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.85 }}
+              className="mt-3 text-xs text-text-tertiary text-center lg:text-left"
+            >
+              Beta gratuita · Sin compromiso · Solo para agentes RE/MAX en
+              Argentina
+            </motion.p>
 
             {/* Secondary link */}
             <motion.a
@@ -338,6 +360,34 @@ export function Hero() {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Differentiator strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.1, ease }}
+          className="mt-12 md:mt-14 pt-8 border-t border-border/50"
+          aria-label="Por qué AgentFlow"
+        >
+          <ul
+            className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-0 sm:divide-x sm:divide-border/50 list-none m-0 p-0"
+            role="list"
+          >
+            {differentiators.map((text, i) => (
+              <li
+                key={i}
+                className="flex items-center gap-2.5 text-sm sm:flex-1 sm:justify-center sm:px-6"
+              >
+                <Check
+                  size={14}
+                  className="text-accent shrink-0"
+                  strokeWidth={2.5}
+                />
+                <span className="text-text-secondary">{text}</span>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
       </div>
     </section>
   );

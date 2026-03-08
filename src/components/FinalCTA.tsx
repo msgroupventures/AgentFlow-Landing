@@ -29,7 +29,7 @@ export function FinalCTA() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.2} className="mt-8 flex justify-center">
-          <WaitlistForm variant="compact" />
+          <WaitlistForm variant="compact" source="final_cta" />
         </AnimatedSection>
 
         <AnimatedSection delay={0.3}>
