@@ -5,21 +5,41 @@ import { motion, useInView } from "motion/react";
 import { AnimatedSection } from "./AnimatedSection";
 
 const metrics = [
-  { value: 2, prefix: "", suffix: " hs/día", label: "recuperadas por agente", sublabel: "que antes se perdían en coordinación y papeleo" },
-  { value: 50, prefix: "", suffix: "%", label: "menos tiempo en visitas", sublabel: "coordinando entre vendedor, comprador y agente" },
-  { value: 2, prefix: "menos de ", suffix: " min", label: "de pedido a documento entregado", sublabel: "autorizaciones, reservas y ofertas listas para firmar" },
-  { value: 24, prefix: "", suffix: "/7", label: "siempre trabajando", sublabel: "9 automatizaciones activas mientras vos vendés" },
+  {
+    qualifier: null,
+    value: 2,
+    unit: "hs/día",
+    label: "recuperadas por agente",
+    sublabel: "que antes se perdían en coordinación y papeleo",
+  },
+  {
+    qualifier: null,
+    value: 50,
+    unit: "%",
+    label: "menos tiempo en visitas",
+    sublabel: "coordinando entre vendedor, comprador y agente",
+  },
+  {
+    qualifier: "menos de",
+    value: 2,
+    unit: "min",
+    label: "de pedido a documento entregado",
+    sublabel: "autorizaciones, reservas y ofertas listas para firmar",
+  },
+  {
+    qualifier: null,
+    value: 24,
+    unit: "/7",
+    label: "siempre trabajando",
+    sublabel: "9 automatizaciones activas mientras vos vendés",
+  },
 ];
 
 function CountUp({
   value,
-  prefix = "",
-  suffix = "",
   duration = 2,
 }: {
   value: number;
-  prefix?: string;
-  suffix?: string;
   duration?: number;
 }) {
   const [count, setCount] = useState(0);
@@ -28,63 +48,26 @@ function CountUp({
 
   useEffect(() => {
     if (!inView) return;
-
-    let start = 0;
-    const end = value;
     const startTime = performance.now();
 
     function animate(now: number) {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / (duration * 1000), 1);
-      // Ease out
       const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(start + (end - start) * eased);
-      setCount(current);
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
+      setCount(Math.round(value * eased));
+      if (progress < 1) requestAnimationFrame(animate);
     }
 
     requestAnimationFrame(animate);
   }, [inView, value, duration]);
 
-  return (
-    <span ref={ref} className="tabular-nums">
-      {prefix}
-      {count}
-      {suffix}
-    </span>
-  );
+  return <span ref={ref} className="tabular-nums">{count}</span>;
 }
 
 export function MetricsSection() {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
-      {/* Section divider */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-
-      {/* Particle-like background dots */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        {Array.from({ length: 30 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 rounded-full bg-accent/20"
-            style={{
-              left: `${(i * 37) % 100}%`,
-              top: `${(i * 53) % 100}%`,
-            }}
-            animate={{
-              opacity: [0.1, 0.4, 0.1],
-              scale: [0.8, 1.2, 0.8],
-            }}
-            transition={{
-              duration: 3 + (i % 3),
-              repeat: Infinity,
-              delay: (i * 0.2) % 2,
-            }}
-          />
-        ))}
-      </div>
 
       <div className="relative mx-auto max-w-[1280px] px-6 md:px-8">
         <AnimatedSection className="text-center mb-16 md:mb-20">
@@ -93,31 +76,46 @@ export function MetricsSection() {
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-border/40">
           {metrics.map((metric, i) => (
             <motion.div
               key={metric.label}
-              className="text-center"
-              initial={{ opacity: 0, y: 20 }}
+              className="px-6 md:px-8 first:pl-0 last:pr-0 flex flex-col gap-2"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{
                 duration: 0.5,
                 delay: i * 0.1,
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-accent">
-                <CountUp
-                  value={metric.value}
-                  prefix={metric.prefix}
-                  suffix={metric.suffix}
-                />
-              </p>
-              <p className="mt-2 text-base md:text-lg font-medium text-text-primary">
+              {/* Qualifier pill */}
+              <div className="h-5 flex items-center">
+                {metric.qualifier && (
+                  <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-accent/70">
+                    {metric.qualifier}
+                  </span>
+                )}
+              </div>
+
+              {/* Number + unit */}
+              <div className="flex items-baseline gap-1.5">
+                <span className="font-display text-5xl md:text-6xl font-bold text-accent leading-none">
+                  <CountUp value={metric.value} />
+                </span>
+                <span className="font-display text-2xl md:text-3xl font-semibold text-accent/80 leading-none">
+                  {metric.unit}
+                </span>
+              </div>
+
+              {/* Label */}
+              <p className="text-sm md:text-base font-semibold text-text-primary leading-snug">
                 {metric.label}
               </p>
-              <p className="mt-1 text-sm text-text-tertiary">
+
+              {/* Sublabel */}
+              <p className="text-xs md:text-sm text-text-tertiary leading-relaxed">
                 {metric.sublabel}
               </p>
             </motion.div>
