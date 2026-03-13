@@ -25,7 +25,7 @@ const features = [
     overline: "PIPELINE DE VENTAS",
     icon: TrendingUp,
     headline: "Cada oportunidad, de principio a fin.",
-    body: "10 etapas claras desde el primer contacto hasta la escritura. AgentFlow avanza cada oportunidad automáticamente, valida que no se saltee ningún paso y te mantiene al tanto del estado de cada operación.",
+    body: "10 etapas claras desde el primer contacto hasta la escritura. AgentFlow avanza cada oportunidad automáticamente, valida que no se saltee ningún paso y te mantiene al tanto del estado de cada operación. Ninguna oportunidad avanza sin completar el paso anterior.",
     badge: "10 etapas del pipeline",
     visual: "pipeline",
   },

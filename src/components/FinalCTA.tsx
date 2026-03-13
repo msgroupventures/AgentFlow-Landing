@@ -24,7 +24,8 @@ export function FinalCTA() {
 
         <AnimatedSection delay={0.1}>
           <p className="mt-4 text-base md:text-lg text-text-secondary">
-            Sumate a la lista de espera y sé de los primeros en usar AgentFlow.
+            La beta está limitada a los primeros 30 agentes RE/MAX.{" "}
+            <span className="text-accent font-medium">Asegurá tu lugar.</span>
           </p>
         </AnimatedSection>
 

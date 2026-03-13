@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "¿Mis datos están seguros?",
-    a: "Sí. AgentFlow usa Supabase (PostgreSQL) con políticas de seguridad a nivel de fila — cada agente solo ve sus propios datos. Los tokens de Google Calendar se encriptan con AES-256-GCM. Todos los registros tienen enmascaramiento de datos personales. Las operaciones sensibles se auditan automáticamente.",
+    a: "Sí. Tus datos y los de tus clientes son completamente privados — solo vos podés verlos. Usamos los mismos estándares de seguridad que usan los bancos, con datos encriptados y acceso restringido por usuario. Ningún otro agente puede ver tus operaciones. Las acciones sensibles quedan registradas automáticamente.",
   },
   {
     q: "¿Funciona con Google Calendar?",

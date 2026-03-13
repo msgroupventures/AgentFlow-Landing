@@ -3,12 +3,9 @@
 import { AnimatedSection, StaggerContainer, StaggerItem } from "./AnimatedSection";
 
 const techLogos = [
-  { name: "Anthropic", subtitle: "Claude AI" },
-  { name: "Meta", subtitle: "WhatsApp API" },
+  { name: "Anthropic", subtitle: "Inteligencia Artificial" },
+  { name: "Meta", subtitle: "WhatsApp Business API" },
   { name: "Google", subtitle: "Calendar" },
-  { name: "Supabase", subtitle: "Database" },
-  { name: "Next.js", subtitle: "Frontend" },
-  { name: "Railway", subtitle: "Infrastructure" },
 ];
 
 export function TechSection() {
@@ -20,15 +17,15 @@ export function TechSection() {
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
         <AnimatedSection className="text-center mb-12 md:mb-16">
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.2] text-text-primary">
-            Construido con tecnología de primer nivel.
+            Integrado con las plataformas que ya conocés.
           </h2>
           <p className="mt-3 text-base text-text-secondary">
-            La misma infraestructura que usan las mejores plataformas del mundo.
+            Tecnología de Anthropic, Meta y Google — las mismas empresas que lideran la industria.
           </p>
         </AnimatedSection>
 
         <StaggerContainer
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto"
           staggerDelay={0.06}
         >
           {techLogos.map((tech) => (

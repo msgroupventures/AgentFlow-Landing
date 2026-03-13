@@ -63,7 +63,7 @@ export function HowItWorks() {
               className="h-px w-full bg-gradient-to-r from-accent/40 via-accent to-accent/40"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               style={{ transformOrigin: "left" }}
             />
@@ -72,7 +72,7 @@ export function HowItWorks() {
               className="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-accent shadow-[0_0_12px_rgba(0,212,170,0.6)]"
               initial={{ left: "0%" }}
               whileInView={{ left: "100%" }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             />
           </div>

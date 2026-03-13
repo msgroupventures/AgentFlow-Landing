@@ -13,8 +13,8 @@ const companyLinks = [
 ];
 
 const legalLinks = [
-  { label: "Política de Privacidad", href: "#" },
-  { label: "Términos de Uso", href: "#" },
+  { label: "Política de Privacidad", href: "/privacy" },
+  { label: "Términos de Uso", href: "/terms" },
 ];
 
 export function Footer() {

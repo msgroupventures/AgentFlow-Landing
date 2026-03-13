@@ -12,6 +12,13 @@ import { StaggerContainer, StaggerItem } from "./AnimatedSection";
 
 const features = [
   {
+    icon: Mic,
+    title: "Mensajes de Voz",
+    headline: "Hablá, no escribas",
+    description:
+      "Mandá audios — la IA transcribe y ejecuta.",
+  },
+  {
     icon: Calendar,
     title: "Calendario Inteligente",
     headline: "Agenda sincronizada",
@@ -45,13 +52,6 @@ const features = [
     headline: "La IA persigue por vos",
     description:
       "Pedidos automáticos por WhatsApp con recordatorios.",
-  },
-  {
-    icon: Mic,
-    title: "Mensajes de Voz",
-    headline: "Hablá, no escribas",
-    description:
-      "Mandá audios — la IA transcribe y ejecuta.",
   },
 ];
 

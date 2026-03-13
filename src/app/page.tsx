@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { ProblemStatement } from "@/components/ProblemStatement";
 import { HowItWorks } from "@/components/HowItWorks";
+import { BeforeAfter } from "@/components/BeforeAfter";
 import { FeatureShowcase } from "@/components/FeatureShowcase";
 import { FeatureGrid } from "@/components/FeatureGrid";
 import { TechSection } from "@/components/TechSection";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <ProblemStatement />
         <HowItWorks />
+        <BeforeAfter />
         <FeatureShowcase />
         <FeatureGrid />
         <TechSection />
