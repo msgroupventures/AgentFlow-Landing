@@ -42,6 +42,11 @@ export default function PrivacyPage() {
               cumplimiento con la Ley 25.326 de Protección de Datos Personales
               de la República Argentina.
             </p>
+            <p className="text-text-secondary leading-relaxed mt-3">
+              AgentFlow es propiedad de y operada por MS Group Ventures LLC,
+              sociedad constituida en los Estados Unidos, con domicilio en 30 N
+              Gould St, Sheridan, WY 82801, Estados Unidos.
+            </p>
           </section>
 
           <hr className="border-border" />

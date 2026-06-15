@@ -108,7 +108,10 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-border/50 text-center">
+        <div className="mt-12 pt-6 border-t border-border/50 text-center space-y-1.5">
+          <p className="text-xs text-text-tertiary">
+            AgentFlow es propiedad de y operada por MS Group Ventures LLC.
+          </p>
           <p className="text-xs text-text-tertiary">
             © 2026 AgentFlow. Todos los derechos reservados.
           </p>
