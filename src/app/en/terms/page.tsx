@@ -137,8 +137,8 @@ export default function TermsPageEn() {
       <LegalSection id="governing-law" title="Governing law">
         <p>
           These terms are governed by the laws of the State of Wyoming, United
-          States, without prejudice to any mandatory consumer protection and
-          personal data rules that apply in your country of residence.
+          States. Personal data of users in Argentina is also processed in
+          accordance with Argentine Personal Data Protection Law 25,326.
         </p>
       </LegalSection>
 

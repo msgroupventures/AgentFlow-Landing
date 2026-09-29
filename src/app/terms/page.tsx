@@ -137,9 +137,9 @@ export default function TermsPage() {
       <LegalSection id="ley-aplicable" title="Ley aplicable">
         <p>
           Estos términos se rigen por las leyes del Estado de Wyoming, Estados
-          Unidos, sin perjuicio de las normas imperativas de protección al
-          consumidor y de datos personales que resulten aplicables en tu país
-          de residencia.
+          Unidos. El tratamiento de datos personales de usuarios en la
+          República Argentina se realiza, además, conforme a la Ley 25.326 de
+          Protección de los Datos Personales.
         </p>
       </LegalSection>
 
