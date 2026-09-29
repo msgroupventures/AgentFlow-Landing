@@ -55,8 +55,12 @@ export default function PrivacyPage() {
         <LegalList
           items={[
             <>
-              <Strong>Agentes inmobiliarios</Strong> que usan AgentFlow
-              (&quot;Usuarios&quot;).
+              <Strong>Oficinas y franquicias RE/MAX</Strong> que contratan
+              AgentFlow para sus agentes (&quot;Franquicias&quot;).
+            </>,
+            <>
+              <Strong>Agentes inmobiliarios</Strong> que usan AgentFlow como
+              parte de una Franquicia (&quot;Usuarios&quot;).
             </>,
             <>
               <Strong>Terceros</Strong> con los que AgentFlow se comunica en
@@ -69,6 +73,15 @@ export default function PrivacyPage() {
             </>,
           ]}
         />
+        <p>
+          <Strong>Roles.</Strong> AgentFlow se contrata a través de la
+          Franquicia. Respecto de los datos de las operaciones, clientes y
+          Contactos de la Franquicia, la Franquicia es la responsable del
+          tratamiento y AgentFlow actúa como prestador de servicios de
+          tratamiento por cuenta de ella, en los términos del artículo 25 de la
+          Ley 25.326. Respecto de los datos de Google Calendar, del sitio web y
+          de la lista de espera, AgentFlow es el responsable.
+        </p>
       </LegalSection>
 
       <LegalSection id="datos" title="2. Qué datos tratamos">
@@ -260,11 +273,12 @@ export default function PrivacyPage() {
         title="7. Datos de Contactos (compradores, vendedores y terceros)"
       >
         <p>
-          El Usuario que carga o se comunica con un Contacto a través de
-          AgentFlow es responsable de contar con una base legítima para hacerlo.
-          AgentFlow trata esos datos solo para las operaciones inmobiliarias en
-          curso. Si sos un Contacto y querés ejercer tus derechos, escribinos a
-          la dirección de la{" "}
+          La Franquicia, a través de sus Usuarios, es responsable de contar
+          con una base legítima para cargar datos de Contactos o comunicarse
+          con ellos a través de AgentFlow. AgentFlow trata esos datos solo por
+          cuenta de la Franquicia y para las operaciones inmobiliarias en
+          curso. Si sos un Contacto y querés ejercer tus derechos, podés
+          dirigirte a la Franquicia o escribirnos a la dirección de la{" "}
           <a href="#derechos" className="text-accent hover:underline">
             sección 10
           </a>
@@ -277,10 +291,13 @@ export default function PrivacyPage() {
           head={["Datos", "Plazo"]}
           rows={[
             [
-              "Cuenta y operaciones",
-              "Mientras la cuenta esté activa, y luego 12 meses o lo que exija la ley",
+              "Operaciones, Contactos, documentos, mensajes y transcripciones de WhatsApp",
+              "Mientras esté vigente el contrato con la Franquicia. Al finalizar, se devuelven o eliminan dentro de los 90 días, salvo que la ley exija conservarlos por más tiempo",
             ],
-            ["Mensajes y transcripciones de WhatsApp", "12 meses desde su recepción"],
+            [
+              "Datos de cuenta de un Usuario que deja la Franquicia",
+              "Se eliminan dentro de los 90 días de su baja. Si pedís la supresión antes, la hacemos dentro del plazo legal. Las operaciones que gestionaste siguen siendo registros de la Franquicia",
+            ],
             ["Datos de Google Calendar", "Hasta que desconectes tu cuenta de Google"],
             ["Lista de espera", "Hasta que te des de baja, y luego hasta 30 días"],
             ["Registros técnicos", "90 días"],
@@ -303,8 +320,10 @@ export default function PrivacyPage() {
           actualizar y suprimir tus datos, y a oponerte a su tratamiento. El
           derecho de acceso puede ejercerse en forma gratuita a intervalos no
           inferiores a seis meses, salvo que se acredite un interés legítimo al
-          efecto. Escribinos a <Mail address={PRIVACY_EMAIL} />. Respondemos
-          dentro de los plazos legales.
+          efecto. Podés dirigirte a tu Franquicia o escribirnos a{" "}
+          <Mail address={PRIVACY_EMAIL} />; si el pedido corresponde a datos
+          que tratamos por cuenta de la Franquicia, lo gestionamos junto con
+          ella. Respondemos dentro de los plazos legales.
         </p>
         <p>
           La AGENCIA DE ACCESO A LA INFORMACIÓN PÚBLICA, en su carácter de

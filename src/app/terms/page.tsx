@@ -50,7 +50,8 @@ export default function TermsPage() {
           inmobiliarios que opera principalmente por WhatsApp. Coordina visitas,
           genera documentos, hace seguimiento de operaciones y se integra con
           Google Calendar. El servicio se ofrece actualmente en etapa beta a
-          agentes RE/MAX en Argentina.
+          través de oficinas y franquicias RE/MAX en Argentina, que lo
+          contratan para sus agentes.
         </p>
       </LegalSection>
 

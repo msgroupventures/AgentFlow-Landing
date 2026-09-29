@@ -56,8 +56,12 @@ export default function PrivacyPageEn() {
         <LegalList
           items={[
             <>
-              <Strong>Real estate agents</Strong> who use AgentFlow
-              (&quot;Users&quot;).
+              <Strong>RE/MAX offices and franchises</Strong> that subscribe to
+              AgentFlow for their agents (&quot;Franchises&quot;).
+            </>,
+            <>
+              <Strong>Real estate agents</Strong> who use AgentFlow as part of
+              a Franchise (&quot;Users&quot;).
             </>,
             <>
               <Strong>Third parties</Strong> AgentFlow communicates with on
@@ -70,6 +74,14 @@ export default function PrivacyPageEn() {
             </>,
           ]}
         />
+        <p>
+          <Strong>Roles.</Strong> AgentFlow is contracted through the
+          Franchise. For the Franchise&apos;s transaction, client and Contact
+          data, the Franchise is the data controller and AgentFlow acts as a
+          service provider processing data on its behalf, under article 25 of
+          Law 25,326. For Google Calendar data, this website and the waitlist,
+          AgentFlow is the controller.
+        </p>
       </LegalSection>
 
       <LegalSection id="data" title="2. What data we process">
@@ -252,11 +264,12 @@ export default function PrivacyPageEn() {
         title="7. Contact data (buyers, sellers and third parties)"
       >
         <p>
-          The User who adds or communicates with a Contact through AgentFlow is
-          responsible for having a legitimate basis to do so. AgentFlow
-          processes that data only for the ongoing real estate transactions. If
-          you are a Contact and want to exercise your rights, write to the
-          address in{" "}
+          The Franchise, through its Users, is responsible for having a
+          legitimate basis to add Contact data or communicate with Contacts
+          through AgentFlow. AgentFlow processes that data only on behalf of
+          the Franchise and for the ongoing real estate transactions. If you
+          are a Contact and want to exercise your rights, you can contact the
+          Franchise or write to the address in{" "}
           <a href="#rights" className="text-accent hover:underline">
             section 10
           </a>
@@ -269,10 +282,13 @@ export default function PrivacyPageEn() {
           head={["Data", "Period"]}
           rows={[
             [
-              "Account and transactions",
-              "While the account is active, then 12 months or as required by law",
+              "Transactions, Contacts, documents, WhatsApp messages and transcriptions",
+              "While the contract with the Franchise is in force. When it ends, returned or deleted within 90 days, unless the law requires keeping them longer",
             ],
-            ["WhatsApp messages and transcriptions", "12 months from receipt"],
+            [
+              "Account data of a User who leaves the Franchise",
+              "Deleted within 90 days of leaving. If you request deletion earlier, we do it within the legal deadline. Transactions you handled remain Franchise records",
+            ],
             ["Google Calendar data", "Until you disconnect your Google account"],
             ["Waitlist", "Until you unsubscribe, then up to 30 days"],
             ["Technical logs", "90 days"],
@@ -294,8 +310,10 @@ export default function PrivacyPageEn() {
           Under Law 25,326 you have the right to access, rectify, update and
           delete your data, and to object to its processing. The right of
           access may be exercised free of charge at intervals of no less than
-          six months, unless a legitimate interest is shown. Write to us at{" "}
-          <Mail address={PRIVACY_EMAIL} />. We respond within the legal
+          six months, unless a legitimate interest is shown. You can contact
+          your Franchise or write to us at <Mail address={PRIVACY_EMAIL} />; if
+          the request concerns data we process on the Franchise&apos;s behalf,
+          we handle it together with the Franchise. We respond within the legal
           deadlines.
         </p>
         <p>

@@ -51,8 +51,9 @@ export default function TermsPageEn() {
           AgentFlow is an artificial intelligence assistant for real estate
           agents that works mainly over WhatsApp. It coordinates showings,
           generates documents, tracks transactions and integrates with Google
-          Calendar. The service is currently offered in beta to RE/MAX agents
-          in Argentina.
+          Calendar. The service is currently offered in beta through RE/MAX
+          offices and franchises in Argentina, which subscribe to it for their
+          agents.
         </p>
       </LegalSection>
 
