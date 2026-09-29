@@ -143,7 +143,7 @@ export function Navigation() {
             {/* Desktop CTA */}
             <a
               href="#waitlist"
-              className="hidden md:inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm font-medium text-accent border border-accent/20 hover:bg-accent/20 hover:border-accent/40 transition-all duration-200"
+              className="hidden md:inline-flex items-center gap-2 rounded-md bg-accent/10 px-5 py-3 text-[15px] font-medium text-accent border border-accent/20 hover:bg-accent/20 hover:border-accent/40 transition-all duration-200"
             >
               Unirme a la Lista de Espera
             </a>
@@ -206,7 +206,7 @@ export function Navigation() {
                   delay: 0.1 + navLinks.length * 0.08,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="mt-4 rounded-full bg-accent px-8 py-3 text-lg font-medium text-bg-primary hover:bg-accent/90 transition-colors"
+                className="mt-4 rounded-md bg-accent px-5 py-3 text-[15px] font-medium text-bg-primary hover:bg-accent/90 transition-colors"
               >
                 Unirme a la Lista de Espera
               </motion.a>

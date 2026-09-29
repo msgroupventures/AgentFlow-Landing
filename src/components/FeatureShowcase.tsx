@@ -254,8 +254,8 @@ export function FeatureShowcase() {
                   <p className="text-base md:text-lg leading-relaxed text-text-secondary mb-6">
                     {feature.body}
                   </p>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-accent/10 text-accent border border-accent/20">
-                    <feature.icon size={16} strokeWidth={2} aria-hidden="true" />
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-mono text-[11px] font-medium bg-accent/[0.08] text-accent border border-accent/20">
+                    <feature.icon size={12} strokeWidth={2} aria-hidden="true" />
                     {feature.badge}
                   </span>
                 </AnimatedSection>
