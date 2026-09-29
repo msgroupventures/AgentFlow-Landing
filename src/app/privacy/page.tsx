@@ -229,7 +229,7 @@ export default function PrivacyPage() {
             ["Google", "Integración con Google Calendar y servicios de mapas", "EE.UU."],
             ["Supabase", "Base de datos, autenticación y almacenamiento de archivos", "EE.UU."],
             ["Railway", "Infraestructura de servidores", "EE.UU."],
-            ["ConvertAPI", "Conversión de documentos a PDF", "Unión Europea"],
+            ["ConvertAPI", "Conversión de documentos a PDF", "EE.UU."],
             ["Langfuse", "Monitoreo técnico del funcionamiento de la IA", "EE.UU."],
             ["Vercel", "Alojamiento de este sitio web", "EE.UU."],
           ]}

@@ -226,7 +226,7 @@ export default function PrivacyPageEn() {
             ["Google", "Google Calendar integration and maps services", "USA"],
             ["Supabase", "Database, authentication and file storage", "USA"],
             ["Railway", "Server infrastructure", "USA"],
-            ["ConvertAPI", "Document-to-PDF conversion", "European Union"],
+            ["ConvertAPI", "Document-to-PDF conversion", "USA"],
             ["Langfuse", "Technical monitoring of AI operation", "USA"],
             ["Vercel", "Hosting of this website", "USA"],
           ]}
