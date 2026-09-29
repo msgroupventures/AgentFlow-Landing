@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
+import { LogoMark } from "./LogoMark";
 
 const navLinks = [
   { label: "Funcionalidades", href: "#funcionalidades" },
@@ -115,11 +116,14 @@ export function Navigation() {
             {/* Logo */}
             <a
               href="#"
-              className="font-display text-xl font-bold text-text-primary tracking-tight"
+              className="flex items-center gap-2 font-display text-xl font-bold text-text-primary tracking-tight"
               aria-label="AgentFlow — Ir al inicio"
             >
-              agent
-              <span className="text-accent">Flow</span>
+              <LogoMark size={32} />
+              <span>
+                agent
+                <span className="text-accent">Flow</span>
+              </span>
             </a>
 
             {/* Desktop links */}
