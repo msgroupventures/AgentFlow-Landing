@@ -151,7 +151,7 @@ export default function PrivacyPageEn() {
                 See the list of your calendars (
                 <Code>calendar.calendarlist.readonly</Code>)
               </>,
-              "Let you choose which calendar showings are recorded in",
+              "Identify your primary calendar and your office's shared calendars, and verify the connection",
             ],
           ]}
         />

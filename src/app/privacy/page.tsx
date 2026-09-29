@@ -151,7 +151,7 @@ export default function PrivacyPage() {
                 Ver la lista de tus calendarios (
                 <Code>calendar.calendarlist.readonly</Code>)
               </>,
-              "Que elijas en qué calendario se registran las visitas",
+              "Identificar tu calendario principal y los calendarios compartidos de tu oficina, y verificar la conexión",
             ],
           ]}
         />
