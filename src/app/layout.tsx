@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "AgentFlow es la plataforma de IA que automatiza visitas, documentos y coordinación para agentes RE/MAX en Argentina. Todo por WhatsApp.",
   keywords:
-    "agente IA inmobiliario, automatización inmobiliaria Argentina, CRM WhatsApp inmobiliario, RE/MAX Argentina IA, proptech Argentina",
+    "agente IA inmobiliario, automatización inmobiliaria Argentina, asistente WhatsApp inmobiliario, RE/MAX Argentina IA, proptech Argentina",
   metadataBase: new URL("https://agentflow.casa"),
   alternates: {
     canonical: "/",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "motion/react";
+import { motion, useInView, useReducedMotion } from "motion/react";
 import { AnimatedSection } from "./AnimatedSection";
 
 const metrics = [
@@ -24,14 +24,14 @@ const metrics = [
     value: 2,
     unit: "min",
     label: "de pedido a documento entregado",
-    sublabel: "autorizaciones, reservas y ofertas listas para firmar",
+    sublabel: "autorizaciones y reservas listas para enviar",
   },
   {
     qualifier: null,
     value: 24,
     unit: "/7",
     label: "siempre trabajando",
-    sublabel: "9 automatizaciones activas mientras vos vendés",
+    sublabel: "13 automatizaciones activas mientras vos vendés",
   },
 ];
 
@@ -42,12 +42,24 @@ function CountUp({
   value: number;
   duration?: number;
 }) {
-  const [count, setCount] = useState(0);
+  // Server render (and no-JS crawlers) get the final value; the count-up
+  // animation only resets to 0 after hydration, before the section is in view.
+  const [count, setCount] = useState(value);
+  const [armed, setArmed] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
-    if (!inView) return;
+    if (reduceMotion || inView) return;
+    setCount(0);
+    setArmed(true);
+    // Only arm once, on mount; later inView changes are handled below.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (!inView || !armed) return;
     const startTime = performance.now();
 
     function animate(now: number) {
@@ -59,7 +71,7 @@ function CountUp({
     }
 
     requestAnimationFrame(animate);
-  }, [inView, value, duration]);
+  }, [inView, armed, value, duration]);
 
   return <span ref={ref} className="tabular-nums">{count}</span>;
 }

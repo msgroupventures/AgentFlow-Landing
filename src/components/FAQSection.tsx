@@ -3,9 +3,16 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Plus } from "lucide-react";
+import Link from "next/link";
 import { AnimatedSection } from "./AnimatedSection";
 
-const faqs = [
+type FAQ = {
+  q: string;
+  a: string;
+  link?: { href: string; label: string };
+};
+
+const faqs: FAQ[] = [
   {
     q: "¿Qué es AgentFlow?",
     a: "AgentFlow es una plataforma de inteligencia artificial diseñada específicamente para agentes inmobiliarios RE/MAX en Argentina. Automatiza las tareas operativas del día a día — coordinación de visitas, generación de documentos, seguimiento de autorizaciones y reservas — todo a través de WhatsApp.",
@@ -20,11 +27,13 @@ const faqs = [
   },
   {
     q: "¿Mis datos están seguros?",
-    a: "Sí. Tus datos y los de tus clientes son completamente privados — solo vos podés verlos. Usamos los mismos estándares de seguridad que usan los bancos, con datos encriptados y acceso restringido por usuario. Ningún otro agente puede ver tus operaciones. Las acciones sensibles quedan registradas automáticamente.",
+    a: "Sí. Tus datos y los de tus clientes son privados: el acceso está restringido a tu cuenta y ningún otro agente puede ver tus operaciones. Usamos cifrado en tránsito y cifrado de credenciales, trabajamos con proveedores bajo contrato y nunca vendemos datos. Más info en nuestra Política de Privacidad.",
+    link: { href: "/privacy", label: "Política de Privacidad" },
   },
   {
     q: "¿Funciona con Google Calendar?",
-    a: "Sí. AgentFlow se sincroniza bidireccionalmente con Google Calendar cada 15 minutos. Las visitas y actividades se reflejan automáticamente en tu calendario de Google, y los cambios que hagas en Google Calendar se sincronizan de vuelta.",
+    a: "Sí. Conectás tu cuenta de Google una vez y AgentFlow lee tu disponibilidad y crea, modifica o cancela los eventos de tus visitas. Solo usamos tu calendario para coordinar tu agenda, nunca para publicidad ni para entrenar modelos de IA. Podés desconectarlo en cualquier momento. Más info en nuestra Política de Privacidad.",
+    link: { href: "/privacy#google-user-data", label: "Política de Privacidad" },
   },
   {
     q: "¿En qué idioma funciona?",
@@ -40,7 +49,12 @@ const faqs = [
   },
 ];
 
-function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
+function FAQItem({
+  q,
+  a,
+  link,
+  index,
+}: FAQ & { index: number }) {
   const [open, setOpen] = useState(false);
   const answerId = `faq-answer-${index}`;
 
@@ -80,6 +94,14 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
           >
             <p className="pb-5 md:pb-6 text-base leading-relaxed text-text-secondary pr-8">
               {a}
+              {link && (
+                <>
+                  {" "}
+                  <Link href={link.href} className="text-accent hover:underline">
+                    {link.label} →
+                  </Link>
+                </>
+              )}
             </p>
           </motion.div>
         )}
@@ -107,7 +129,7 @@ export function FAQSection() {
         <AnimatedSection delay={0.15}>
           <div className="border-t border-border">
             {faqs.map((faq, i) => (
-              <FAQItem key={faq.q} q={faq.q} a={faq.a} index={i} />
+              <FAQItem key={faq.q} {...faq} index={i} />
             ))}
           </div>
         </AnimatedSection>

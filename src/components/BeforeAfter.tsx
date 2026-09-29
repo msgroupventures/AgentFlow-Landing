@@ -20,7 +20,7 @@ const solutionItems = [
   "PDFs generados en 2 minutos, sin errores.",
   "Recordatorios automáticos a 7, 3 y 1 día.",
   "Mandá un audio. La IA transcribe y ejecuta.",
-  "Pipeline automático con 10 etapas validadas.",
+  "Pipeline de venta en 9 etapas, siempre al día.",
 ];
 
 export function BeforeAfter() {

@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { Mail } from "lucide-react";
 
 const productLinks = [
-  { label: "Funcionalidades", href: "#funcionalidades" },
-  { label: "Cómo Funciona", href: "#como-funciona" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Funcionalidades", href: "/#funcionalidades" },
+  { label: "Cómo Funciona", href: "/#como-funciona" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 const companyLinks = [
@@ -15,6 +16,8 @@ const companyLinks = [
 const legalLinks = [
   { label: "Política de Privacidad", href: "/privacy" },
   { label: "Términos de Uso", href: "/terms" },
+  { label: "Privacy Policy (EN)", href: "/en/privacy", lang: "en" },
+  { label: "Terms (EN)", href: "/en/terms", lang: "en" },
 ];
 
 export function Footer() {
@@ -24,12 +27,12 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-1">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="font-display text-xl font-bold text-text-primary tracking-tight"
             >
               agent<span className="text-accent">Flow</span>
-            </a>
+            </Link>
             <p className="mt-3 text-sm text-text-tertiary leading-relaxed max-w-xs">
               IA que automatiza tus operaciones inmobiliarias.
             </p>
@@ -97,6 +100,8 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
+                    lang={link.lang}
+                    hrefLang={link.lang}
                     className="text-sm text-text-tertiary hover:text-accent transition-colors"
                   >
                     {link.label}
