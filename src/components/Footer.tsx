@@ -30,11 +30,12 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 font-display text-xl font-bold text-text-primary tracking-tight"
+              className="inline-flex items-center gap-2 font-display text-xl text-text-primary tracking-tight"
             >
               <LogoMark size={32} />
               <span>
-                agent<span className="text-accent">Flow</span>
+                <span className="font-normal">agent</span>
+                <span className="font-bold text-accent">Flow</span>
               </span>
             </Link>
             <p className="mt-3 text-sm text-text-tertiary leading-relaxed max-w-xs">

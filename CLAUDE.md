@@ -42,7 +42,8 @@ This project uses the Anthropic frontend-design skill. Read `.claude/skills/fron
 **Non-negotiable rules:**
 - Dark theme ONLY. Primary background: `#0A0B14`. Never use white/light backgrounds.
 - Accent color: Electric Teal `#00D4AA`. Never use purple gradients or generic blue.
-- Typography: Satoshi for headlines, General Sans for body. Never use Inter, Arial, Roboto, or Space Grotesk.
+- Typography: Geist Sans for everything (Geist Mono for code/labels), per `docs/BRAND-GUIDELINES-v1.2.md` §6. Never use Inter, Arial, Roboto, Space Grotesk, or the retired Satoshi + General Sans pair.
+- Logo: use the official files in `docs/` (`agentflow-mark.svg`, `agentflow-favicon.svg`, lockups). Wordmark is `agent` weight 400 Off-White + `Flow` weight 700 Electric Teal.
 - Body text: `#F1F5F9` on dark backgrounds. Never pure white `#FFFFFF`.
 - All user-facing copy is Spanish (es-AR) using "vos" form. Pull exact copy from COPY.md.
 - All animations use `transform` and `opacity` only. Respect `prefers-reduced-motion`.

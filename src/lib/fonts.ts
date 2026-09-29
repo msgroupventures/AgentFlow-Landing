@@ -1,45 +1,18 @@
 import localFont from "next/font/local";
 
-export const satoshi = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Satoshi-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Satoshi-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Satoshi-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-satoshi",
+// Brand typography per docs/BRAND-GUIDELINES-v1.2.md §6: Geist Sans (single family) + Geist Mono.
+export const geistSans = localFont({
+  src: "../../public/fonts/Geist-Variable.woff2",
+  weight: "100 900",
+  style: "normal",
+  variable: "--font-geist-sans",
   display: "swap",
 });
 
-export const generalSans = localFont({
-  src: [
-    {
-      path: "../../public/fonts/GeneralSans-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/GeneralSans-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/GeneralSans-Semibold.woff2",
-      weight: "600",
-      style: "normal",
-    },
-  ],
-  variable: "--font-general-sans",
+export const geistMono = localFont({
+  src: "../../public/fonts/GeistMono-Variable.woff2",
+  weight: "100 900",
+  style: "normal",
+  variable: "--font-geist-mono",
   display: "swap",
 });

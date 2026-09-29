@@ -116,13 +116,13 @@ export function Navigation() {
             {/* Logo */}
             <a
               href="#"
-              className="flex items-center gap-2 font-display text-xl font-bold text-text-primary tracking-tight"
+              className="flex items-center gap-2 font-display text-xl text-text-primary tracking-tight"
               aria-label="AgentFlow — Ir al inicio"
             >
               <LogoMark size={32} />
               <span>
-                agent
-                <span className="text-accent">Flow</span>
+                <span className="font-normal">agent</span>
+                <span className="font-bold text-accent">Flow</span>
               </span>
             </a>
 

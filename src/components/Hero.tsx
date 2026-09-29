@@ -273,7 +273,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease }}
             >
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.05em] border border-accent/20 bg-accent/5 text-accent">
+              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.08em] border border-accent/20 bg-accent/5 text-accent">
                 Para agentes RE/MAX en Argentina
               </span>
             </motion.div>
