@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120">
+  <title>AgentFlow horizontal lockup (on light)</title>
+  <desc>Primary Electric Teal mark with dark wordmark for light backgrounds ≥#F1F5F9 cream. NOT for pure-white surfaces (see mono-on-light variant). Geist Sans.</desc>
+  <defs>
+    <style>
+      @import url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5/index.css');
+      .agentflow-wm { font-family: 'Geist Sans', 'Geist', system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+  
+  <g transform="translate(20, 20)">
+    <circle cx="40" cy="40" r="34" fill="#00D4AA"/>
+    <path d="M 13 40 Q 26 20, 40 40 T 67 40" stroke="#0A0B14" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <text x="120" y="76" class="agentflow-wm" font-size="54">
+    <tspan font-weight="400" fill="#0A0B14">agent</tspan><tspan font-weight="700" fill="#00D4AA">Flow</tspan>
+  </text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <title>AgentFlow wordmark only</title>
+  <desc>Wordmark without the mark, for narrow horizontal contexts. Geist Sans.</desc>
+  <defs>
+    <style>
+      @import url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5/index.css');
+      .agentflow-wm { font-family: 'Geist Sans', 'Geist', system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+  
+  <text x="0" y="42" class="agentflow-wm" font-size="42">
+    <tspan font-weight="400" fill="#F1F5F9">agent</tspan><tspan font-weight="700" fill="#00D4AA">Flow</tspan>
+  </text>
+</svg>

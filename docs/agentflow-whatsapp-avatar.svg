@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <title>AgentFlow WhatsApp Business avatar</title>
+  <desc>Mark sized to fill the WhatsApp circular profile crop. Export as PNG with transparent background.</desc>
+  <circle cx="320" cy="320" r="316" fill="#00D4AA"/>
+  <path d="M 108 320 Q 214 160, 320 320 T 532 320" stroke="#0A0B14" stroke-width="44" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

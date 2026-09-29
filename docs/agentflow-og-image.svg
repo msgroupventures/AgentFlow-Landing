@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <title>AgentFlow Open Graph image</title>
+  <desc>Social sharing card for Twitter, LinkedIn, Slack, WhatsApp link previews. Geist Sans.</desc>
+  <defs>
+    <style>
+      @import url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5/index.css');
+      .agentflow-wm { font-family: 'Geist Sans', 'Geist', system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+  
+  <rect width="1200" height="630" fill="#0A0B14"/>
+  
+  <g transform="translate(140, 215)">
+    <circle cx="100" cy="100" r="100" fill="#00D4AA"/>
+    <path d="M 33 100 Q 67 50, 100 100 T 167 100" stroke="#0A0B14" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <text x="380" y="275" class="agentflow-wm" font-size="96">
+    <tspan font-weight="400" fill="#F1F5F9">agent</tspan><tspan font-weight="700" fill="#00D4AA">Flow</tspan>
+  </text>
+  
+  <text x="380" y="345" class="agentflow-wm" font-size="28" font-weight="400" fill="#94A3B8">
+    IA que automatiza tus operaciones inmobiliarias por WhatsApp.
+  </text>
+  
+  <text x="380" y="395" class="agentflow-wm" font-size="20" font-weight="500" fill="#00D4AA" letter-spacing="2">
+    PARA AGENTES RE/MAX EN ARGENTINA
+  </text>
+  
+  <text x="140" y="555" class="agentflow-wm" font-size="22" font-weight="500" fill="#64748B">
+    agentflow.casa
+  </text>
+  
+  <path d="M 0 610 Q 600 600, 1200 610" stroke="#00D4AA" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4"/>
+</svg>

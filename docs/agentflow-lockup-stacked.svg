@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <title>AgentFlow stacked lockup</title>
+  <desc>Mark above wordmark for vertical/portrait contexts. Geist Sans.</desc>
+  <defs>
+    <style>
+      @import url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5/index.css');
+      .agentflow-wm { font-family: 'Geist Sans', 'Geist', system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+  
+  <g transform="translate(60, 30)">
+    <circle cx="60" cy="60" r="50" fill="#00D4AA"/>
+    <path d="M 20 60 Q 40 30, 60 60 T 100 60" stroke="#0A0B14" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <text x="120" y="200" text-anchor="middle" class="agentflow-wm" font-size="38">
+    <tspan font-weight="400" fill="#F1F5F9">agent</tspan><tspan font-weight="700" fill="#00D4AA">Flow</tspan>
+  </text>
+</svg>

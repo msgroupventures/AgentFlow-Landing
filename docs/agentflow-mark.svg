@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <title>AgentFlow primary mark</title>
+  <desc>Electric Teal disc with negative-space symmetric wave representing flow</desc>
+  <circle cx="128" cy="128" r="106" fill="#00D4AA"/>
+  <path d="M 43 128 Q 85 64, 128 128 T 213 128" stroke="#0A0B14" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

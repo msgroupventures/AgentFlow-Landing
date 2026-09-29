@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120">
+  <title>AgentFlow horizontal lockup (B&amp;W for INPI trademark filing)</title>
+  <desc>Monochrome black-and-white version for INPI Mixta trademark filing. No color claim — broader protection scope. Geist Sans wordmark preserves regular/bold weight contrast without relying on color.</desc>
+  <defs>
+    <style>
+      @import url('https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5/index.css');
+      .agentflow-wm { font-family: 'Geist Sans', 'Geist', system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Icon: pure black circle with pure white wave -->
+  <g transform="translate(20, 20)">
+    <circle cx="40" cy="40" r="34" fill="#000000"/>
+    <path d="M 13 40 Q 26 20, 40 40 T 67 40" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark: all pure black; weight contrast (400 vs 700) carries the hierarchy -->
+  <text x="120" y="76" class="agentflow-wm" font-size="54" fill="#000000">
+    <tspan font-weight="400">agent</tspan><tspan font-weight="700">Flow</tspan>
+  </text>
+</svg>
