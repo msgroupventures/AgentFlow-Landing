@@ -2,10 +2,10 @@
 
 import { AnimatedSection, StaggerContainer, StaggerItem } from "./AnimatedSection";
 
-const techLogos = [
-  { name: "Anthropic", subtitle: "Inteligencia Artificial" },
-  { name: "Meta", subtitle: "WhatsApp Business API" },
-  { name: "Google", subtitle: "Calendar" },
+const tools = [
+  { name: "WhatsApp", subtitle: "Tu canal de trabajo" },
+  { name: "Google Calendar", subtitle: "Tu agenda, sincronizada" },
+  { name: "Anthropic", subtitle: "Modelos de IA" },
 ];
 
 export function TechSection() {
@@ -17,10 +17,10 @@ export function TechSection() {
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
         <AnimatedSection className="text-center mb-12 md:mb-16">
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.2] text-text-primary">
-            Integrado con las plataformas que ya conocés.
+            Funciona con las herramientas que ya usás.
           </h2>
           <p className="mt-3 text-base text-text-secondary">
-            Tecnología de Anthropic, Meta y Google — las mismas empresas que lideran la industria.
+            Se conecta con WhatsApp y Google Calendar, y usa modelos de IA de Anthropic.
           </p>
         </AnimatedSection>
 
@@ -28,10 +28,10 @@ export function TechSection() {
           className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto"
           staggerDelay={0.06}
         >
-          {techLogos.map((tech) => (
+          {tools.map((tech) => (
             <StaggerItem key={tech.name}>
               <div className="group flex flex-col items-center justify-center py-6 px-4 rounded-xl border border-border/50 bg-bg-secondary/30 transition-all duration-300 hover:border-accent/20 hover:bg-bg-secondary">
-                {/* Text-based logo placeholder — grayscale to teal on hover */}
+                {/* Text names only — no third-party logos (no implied endorsement) */}
                 <span className="font-display text-lg font-bold text-text-tertiary group-hover:text-text-primary transition-colors duration-300">
                   {tech.name}
                 </span>
@@ -42,6 +42,10 @@ export function TechSection() {
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        <p className="mt-8 text-center text-xs text-text-tertiary">
+          Las marcas mencionadas pertenecen a sus titulares. AgentFlow no está afiliado ni avalado por ellos.
+        </p>
       </div>
     </section>
   );

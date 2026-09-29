@@ -9,7 +9,7 @@ const features = [
     overline: "COORDINACIÓN DE VISITAS",
     icon: Users,
     headline: "Tres partes. Cero llamadas.",
-    body: "AgentFlow coordina visitas entre vendedor, comprador y agente completamente por WhatsApp. Verifica la disponibilidad de la propiedad, chequea tu agenda, contacta a cada parte y confirma cuando los tres aceptan. Si alguien cancela o pide reprogramar, la IA se encarga.",
+    body: "AgentFlow coordina visitas entre vendedor, comprador y agente por WhatsApp. Respeta los horarios en que cada propiedad se puede mostrar, chequea tu agenda, contacta a cada parte y confirma cuando los tres aceptan. Si alguien pide cambiar el horario, AgentFlow vuelve a coordinar con las tres partes.",
     badge: "50% menos tiempo en coordinación",
     visual: "visit",
   },
@@ -17,16 +17,16 @@ const features = [
     overline: "DOCUMENTOS AUTOMÁTICOS",
     icon: FileText,
     headline: "De pedido a PDF en menos de 2 minutos.",
-    body: "Autorizaciones de venta, reservas, ofertas — generados automáticamente con los datos de la operación. El documento se envía al cliente por WhatsApp. La IA hace seguimiento de la firma y te avisa cuando llega.",
-    badge: "5 tipos de documento",
+    body: "Autorizaciones de venta y alquiler, reservas y ACM — generados con los datos de la operación sobre las plantillas oficiales. El documento se envía al cliente por WhatsApp y AgentFlow te avisa cuando lo confirma.",
+    badge: "20 plantillas oficiales",
     visual: "docs",
   },
   {
     overline: "PIPELINE DE VENTAS",
     icon: TrendingUp,
     headline: "Cada oportunidad, de principio a fin.",
-    body: "10 etapas claras desde el primer contacto hasta la escritura. AgentFlow avanza cada oportunidad automáticamente, valida que no se saltee ningún paso y te mantiene al tanto del estado de cada operación. Ninguna oportunidad avanza sin completar el paso anterior.",
-    badge: "10 etapas del pipeline",
+    body: "Cada venta avanza por 9 etapas, desde el primer contacto hasta el cierre. AgentFlow actualiza la etapa a partir de lo que registrás — la visita, el ACM, la autorización, la publicación, las visitas y la reserva — y te mantiene al tanto del estado de cada operación.",
+    badge: "9 etapas de venta",
     visual: "pipeline",
   },
 ];
@@ -130,7 +130,7 @@ function FeatureVisual({ type }: { type: string }) {
           {[
             { label: "Autorización de Venta", rotation: -6, delay: 0.1 },
             { label: "Reserva", rotation: -3, delay: 0.3 },
-            { label: "Oferta de Compra", rotation: 0, delay: 0.5 },
+            { label: "ACM", rotation: 0, delay: 0.5 },
           ].map((doc, i) => (
             <motion.div
               key={doc.label}
@@ -174,16 +174,15 @@ function FeatureVisual({ type }: { type: string }) {
     <div className="relative w-full h-full min-h-[280px] flex items-center justify-center">
       <div className="flex flex-col gap-1.5 w-full max-w-[240px]">
         {[
-          { label: "Lead", width: "100%", active: true },
-          { label: "Contacto", width: "92%", active: true },
-          { label: "Visita", width: "84%", active: true },
-          { label: "Oferta", width: "76%", active: true },
-          { label: "Negociación", width: "68%", active: false },
-          { label: "Reserva", width: "60%", active: false },
-          { label: "Seña", width: "52%", active: false },
-          { label: "Boleto", width: "44%", active: false },
-          { label: "Hipoteca", width: "36%", active: false },
-          { label: "Escritura", width: "28%", active: false },
+          { label: "Lead recibido", width: "100%", active: true },
+          { label: "Visita inicial", width: "92%", active: true },
+          { label: "Análisis comparativo", width: "84%", active: true },
+          { label: "Autorización obtenida", width: "76%", active: true },
+          { label: "Lista para publicar", width: "68%", active: false },
+          { label: "Propiedad publicada", width: "60%", active: false },
+          { label: "Visitas programadas", width: "52%", active: false },
+          { label: "Reserva firmada", width: "44%", active: false },
+          { label: "Venta final", width: "36%", active: false },
         ].map((stage, i) => (
           <motion.div
             key={stage.label}
@@ -197,7 +196,7 @@ function FeatureVisual({ type }: { type: string }) {
             }}
           >
             <div
-              className={`h-5 rounded-r-full flex items-center px-2 text-[10px] font-medium ${
+              className={`h-5 rounded-r-full flex items-center px-2 text-[10px] font-medium whitespace-nowrap ${
                 stage.active
                   ? "bg-accent/20 text-accent border-l-2 border-accent"
                   : "bg-bg-tertiary/50 text-text-tertiary border-l-2 border-border"
