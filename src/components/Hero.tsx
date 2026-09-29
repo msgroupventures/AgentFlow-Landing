@@ -80,9 +80,24 @@ function WhatsAppMockup() {
 
         {/* WhatsApp header */}
         <div className="bg-[#1F2C34] px-4 py-3 flex items-center gap-3 border-b border-white/5">
-          <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
-            <span className="text-accent text-xs font-bold">AF</span>
-          </div>
+          {/* Official WhatsApp avatar — docs/agentflow-whatsapp-avatar.svg */}
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 640 640"
+            aria-hidden="true"
+            className="shrink-0"
+          >
+            <circle cx="320" cy="320" r="316" fill="#00D4AA" />
+            <path
+              d="M 108 320 Q 214 160, 320 320 T 532 320"
+              stroke="#0A0B14"
+              strokeWidth="44"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
           <div className="flex-1">
             <p className="text-sm font-medium text-text-primary leading-tight">
               AgentFlow
@@ -273,7 +288,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease }}
             >
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.05em] border border-accent/20 bg-accent/5 text-accent">
+              <span className="inline-block px-2.5 py-1 rounded-full font-mono text-[11px] font-medium uppercase tracking-[0.04em] border border-accent/20 bg-accent/[0.08] text-accent">
                 Para agentes RE/MAX en Argentina
               </span>
             </motion.div>

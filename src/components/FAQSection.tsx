@@ -118,7 +118,7 @@ export function FAQSection() {
 
       <div className="mx-auto max-w-3xl px-6 md:px-8">
         <AnimatedSection className="text-center mb-12 md:mb-16">
-          <p className="text-sm font-semibold uppercase tracking-[0.05em] text-accent mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-accent mb-4">
             FAQ
           </p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.2] text-text-primary">

@@ -221,7 +221,7 @@ export function FeatureShowcase() {
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
         {/* Section header */}
         <AnimatedSection className="text-center mb-16 md:mb-20">
-          <p className="text-sm font-semibold uppercase tracking-[0.05em] text-accent mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-accent mb-4">
             Funcionalidades
           </p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.2] text-text-primary">
@@ -245,7 +245,7 @@ export function FeatureShowcase() {
                 <AnimatedSection
                   className={isReversed ? "lg:order-2" : "lg:order-1"}
                 >
-                  <span className="inline-block text-xs font-semibold uppercase tracking-[0.05em] text-accent mb-4">
+                  <span className="inline-block text-xs font-semibold uppercase tracking-[0.08em] text-accent mb-4">
                     {feature.overline}
                   </span>
                   <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.2] text-text-primary mb-4">
@@ -254,8 +254,8 @@ export function FeatureShowcase() {
                   <p className="text-base md:text-lg leading-relaxed text-text-secondary mb-6">
                     {feature.body}
                   </p>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-accent/10 text-accent border border-accent/20">
-                    <feature.icon size={16} strokeWidth={2} aria-hidden="true" />
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-mono text-[11px] font-medium bg-accent/[0.08] text-accent border border-accent/20">
+                    <feature.icon size={12} strokeWidth={2} aria-hidden="true" />
                     {feature.badge}
                   </span>
                 </AnimatedSection>

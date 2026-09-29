@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { satoshi, generalSans } from "@/lib/fonts";
+import { geistSans, geistMono } from "@/lib/fonts";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -106,7 +106,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-AR"
-      className={`${satoshi.variable} ${generalSans.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <head>
         {structuredData.map((data, i) => (

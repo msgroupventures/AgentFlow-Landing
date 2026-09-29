@@ -44,7 +44,7 @@ export function HowItWorks() {
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
         {/* Section header */}
         <AnimatedSection className="text-center mb-16 md:mb-20">
-          <p className="text-sm font-semibold uppercase tracking-[0.05em] text-accent mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-accent mb-4">
             Cómo Funciona
           </p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.2] text-text-primary">

@@ -86,12 +86,12 @@ export function WaitlistForm({
               aria-describedby={error ? `waitlist-error-${variant}` : undefined}
               autoComplete="email"
               disabled={loading}
-              className="flex-1 px-4 py-3 rounded-full bg-bg-secondary border border-border text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors disabled:opacity-50"
+              className="flex-1 px-4 py-3 rounded-md bg-bg-secondary border border-border text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors disabled:opacity-50"
             />
             <button
               type="submit"
               disabled={loading}
-              className="px-6 py-3 rounded-full bg-accent text-bg-primary font-semibold hover:brightness-110 transition-all cursor-pointer whitespace-nowrap shadow-[0_0_20px_rgba(0,212,170,0.3)] hover:shadow-[0_0_30px_rgba(0,212,170,0.5)] disabled:opacity-70 disabled:cursor-not-allowed"
+              className="px-5 py-3 rounded-md bg-accent text-[15px] text-bg-primary font-medium hover:brightness-110 transition-all cursor-pointer whitespace-nowrap shadow-[0_0_20px_rgba(0,212,170,0.3)] hover:shadow-[0_0_30px_rgba(0,212,170,0.5)] disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {loading ? "Registrando..." : "Unirme →"}
             </button>
